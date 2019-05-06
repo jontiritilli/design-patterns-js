@@ -8,7 +8,7 @@
   - [ ] Builder. Used to create complex objects.
   - [ ] Factory Method. Creates objects without specifying the exact class to create.
   - [ ] Prototype. Creates a new object from an existing object.
-  - [ ] Singleton. Ensures only one instance of an object is created.
+  - [x] Singleton. Ensures only one instance of an object is created.
 
 ### Structural Design Patterns
   - [ ] Adapter. Allows for two incompatible classes to work together by wrapping an interface around one of the existing classes.

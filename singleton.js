@@ -1,5 +1,8 @@
 /**
  * An example of how classes normally work
+ * 
+ * Everytime 'new' is called, a new object is created.
+ * In this case each object has its own "count" property.
  */
 class NotASingleton {
     constructor() {
@@ -47,24 +50,36 @@ console.log('\n\n\n\n\n');
 
 
 
-let anInstance = null; // this would normally be a private variable held in a module
 
-class ASingleton {
-    constructor() {
-        if (anInstance) {
-            return anInstance;
+/**
+ * A Singleton
+ * If a singleton has already been instantiated, then it returns itself.
+ * This means there can only ever be 1 instance. All references to this
+ * instance share the same "count" property.
+ * 
+ * The variable "anInstance" is made private with an IIFE. If we were using a
+ * module system like ES6 or CommonJS modules, then we wouldn't need to use
+ * an IIFE.
+ */
+const ASingleton = (function() {
+    let anInstance = null; // should be a private variable held in a module
+    class ASingleton {
+        constructor() {
+            if (anInstance) {
+                return anInstance;
+            }
+
+            this.count = 0;
+            anInstance = this;
         }
 
-        this.count = 0;
-        anInstance = this;
+        increment() {
+            this.count++;
+        }
     }
 
-    increment() {
-        this.count++;
-    }
-}
-
-
+    return ASingleton;
+})()
 
 const singleton1 = new ASingleton();
 const singleton2 = new ASingleton();
