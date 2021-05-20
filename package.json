@@ -1,0 +1,13 @@
+{
+  "name": "design-patterns-js",
+  "version": "1.0.0",
+  "description": "Project to learn and practice design pattern application in JS/TS",
+  "main": "index.js",
+  "repository": "git@github.com:jontiritilli/design-patterns-js.git",
+  "author": "Jon Tiritilli <jonathantiritilli@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}
