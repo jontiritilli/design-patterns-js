@@ -6,6 +6,9 @@
   "repository": "git@github.com:jontiritilli/design-patterns-js.git",
   "author": "Jon Tiritilli <jonathantiritilli@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {},
   "devDependencies": {
     "typescript": "^4.2.4"
